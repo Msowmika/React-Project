@@ -1,0 +1,667 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+
+.app-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.color-options {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+
+}
+
+.color-option {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+
+.color-option.selected {
+  border: 2px solid #000;
+}
+
+.color-option:hover {
+  opacity: 0.8;
+}
+
+.acronym {
+  width: 50px;
+  height: 50px;
+  gap: 0px;
+  opacity: 0px;
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto;
+  font-weight: 500;
+  margin-top: -2px;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.groupname {
+  margin-left: 20px;
+  padding-top: 10px;
+  font-family: Roboto;
+  line-height: 24px;
+  letter-spacing: 0.005em;
+  font-weight: 500;
+  font-size: 20px;
+
+}
+
+.group-title {
+  color: #333;
+  background-color: rgba(232, 232, 232, 1);
+  width: 990px;
+  height: 8%;
+  font-size: 18px;
+  padding-top: 10px;
+  margin-left: -500px;
+  display: flex;
+  flex-direction: row;
+  text-align: justify;
+  margin-left: 0%;
+  width: 1190px;
+}
+
+.groupitem {
+  list-style: none; 
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  margin-left: 20px;
+  margin: 0px;
+  padding: 10px;
+  width: 100%;
+
+}
+
+.heading{
+  font-family: Roboto;
+  font-size: 31.52px;
+  font-weight: 500;
+  line-height: 36.94px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 15px;
+  padding: 0;
+  }
+
+  .notescontainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: -200px;
+    height: 800px;
+    width: 1190px;
+  
+  }
+  
+  .group-list {
+    
+    background: #f1f1f1;
+    padding: 10px;
+    margin-top: px;
+    border-right: 1px solid #ccc;
+  }
+
+  .groupcontainer {
+    width: 40%;
+    height: 100%;
+    margin-left: 60px;
+  
+  }
+
+  .groupcreatebutton {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    width: 220px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 1);
+    margin-left: 40px;
+    margin-top: 40px;
+    position: relative;
+    border: none;
+  }
+
+  textarea {
+    min-width: 1160px;
+    max-width: 1160px;
+    min-height: 182px;
+    max-height: 182px;
+    margin-top: 530px;
+    margin-left: 5px;
+    border-radius: 9px 0px 0px 0px;
+    border: 15px solid rgba(232, 232, 232, 1);
+    opacity: 0px;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    background-color:  rgba(255, 255, 255, 1);
+    color: rgba(154, 154, 154, 1);
+  }
+  
+  .send {
+    width: 4%;
+    height: 5%;
+    margin-left: 1110px;
+    margin-top: -55px;
+    border: none;
+    background-color: white;
+    position: absolute;
+  }
+
+  .noteinput {
+    margin-left: -5px;
+    gap: 0px;
+    margin-top: 62px;
+    position: absolute;
+    height: 65%;
+    width: 67%;
+    
+  }
+
+  .note-list {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    margin-left: 0%;
+    overflow-y: auto;
+  
+  }
+
+  .note-item {
+    padding-left: 20px;
+    border-radius: 5px;
+    background: rgba(247, 236, 220, 1);
+    display: flex;
+    flex-direction: row;
+   
+  }
+  
+  .notecontent {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+  }
+
+  .notetext {
+    padding: px;
+    margin-left: 80px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.035em;
+    text-align: left;
+    color: rgb(12, 11, 11);
+    
+  
+  }
+
+  .notedate {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: black;
+    margin-right: 10px;
+    display: flex;
+
+  }
+
+  .empty-image {
+    width: 50%;
+    height: 50%;
+    margin-top: 50px;
+    margin-left: 280px;
+    opacity: 0px;
+  }
+  
+  .empty-note-list {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(247, 236, 220, 1);
+    
+  }
+  
+  .empty-heading {
+    margin-top: 0px;
+    margin-left: 500px;
+    font-family: Roboto;
+    font-size: 35px;
+    font-weight: 400;
+    padding: 0px;
+    line-height: 0px;
+    letter-spacing: 0.02em;
+  }
+  
+  .para1 {
+    margin-left: 370px;
+    padding: 0px;
+    margin-top: 30px;
+    line-height: 0px;
+  }
+  
+  .para2 {
+    margin-top: 240px;
+    margin-left: 518px;
+  }
+  
+  .lock {
+    height: 2%;
+    width: 2%;
+  }
+  
+  .empty-para,.para1,.para2 {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 0px;
+    padding: 0;
+  }
+  .showgrouplist {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    padding: 0;
+  }
+
+  .group-selected {
+    background-color: #fff; 
+  }
+
+  .groupitem.active {
+    border: 2px solid #000;
+  }
+
+  .create {
+    margin-left: 130px;
+    background: rgba(0, 0, 0, 1);
+    color: white;
+    font-family: Roboto;
+    border-radius: 10px;
+    height: 50%;
+    width: 35%;
+    margin-top: 0px;
+  }
+
+  .title{
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.035em;
+    text-align: left;
+    margin-top: -20px;
+    margin-left: 80px;
+  }
+
+  .name1, .name2{
+    font-family: Roboto;
+    font-size: 14.6px;
+    font-weight: 500;
+    line-height: 23.39px;
+    letter-spacing: 0.035em;
+    text-align: left;
+
+
+  }
+ .name1, input{
+ padding-right: 40px;
+ margin-top: 10px;
+ }
+  .name2{
+    margin-top: 5px;
+     
+  }
+
+  .groupitem:active {
+    background-color: rgba(247, 236, 220, 1);
+    border-radius: 32px 0px 0px 32px;
+    width: 410px;
+  }
+
+  .heading{
+    display: flex;
+    }
+    
+    .bg {
+      width: 5px;
+      height: 5px;
+    }
+    
+    .group-item {
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #fff;
+    }
+    
+    .group-name {
+      display: flex;
+      flex-direction: row;
+    }
+    
+    
+    .inputnotes{
+      margin-left: 0px;
+      margin-top: 0px;
+      
+    }
+    
+@media only screen and (max-width: 600px) {
+
+  .group-selected .heading {
+    display: none;
+
+  }
+
+  .app-container {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-y: auto;
+  }
+
+  .groupcreatebutton {
+    width: 120%;
+    height: 10%;
+  }
+
+  .acronym {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+  }
+
+  .groupitem {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    width: 90%;
+    height: auto;
+  }
+
+  .groupname {
+    margin-left: 10px;
+    padding-top: 14px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+
+  }
+  .notescontainer {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  textarea {
+    min-width: 98%;
+    max-width: 98%;
+    min-height: 10%;
+    max-height: 10%;
+    margin-top: 460px;
+    font-size: 12px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 5px solid #ccc;
+    margin-left: 5px;
+  }
+
+  .send {
+    margin-left: 410px;
+    margin-top: -40px;
+    width: 5px;
+    height: 1px;
+    border: none;
+    background-color: white;
+    position: absolute;
+    }
+  
+
+  .note-list {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 500px;
+    flex-direction: column;
+    font-family: Roboto;
+    font-size: 13.59px;
+    font-weight: 500;
+    line-height: 13.27px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    display: flex;
+  }
+
+  .note-item {
+    padding: 10px;
+  }
+
+  .notetext {
+    font-size: 12px;
+    font-family: Roboto;
+    font-weight: 400;
+    line-height: 20.82px;
+    letter-spacing: 0.035em;
+    text-align: left;
+    margin-left: 40px;
+    padding: 0;
+  }
+  .notelist{
+  display: flex;
+  }
+  .notedate {
+    font-size: 14px;
+    display: flex;
+    padding: 0px;
+    line-height: 15px;
+  }
+
+  .noteinput{
+    height: 70%;
+    width: 100%;
+
+  }
+  .group-selected {
+    background-color: #fff; 
+  }
+
+  .group-title {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .color-options {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  .color-option {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid transparent;
+  }
+  
+  .color-option.selected {
+    border: 2px solid #000;
+  }
+  
+  .color-option:hover {
+    opacity: 0.8;
+  }
+  .group-list {
+    margin-left: 10px;
+    background: #f1f1f1;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+  }
+  .grouplist{
+    margin-right: -50px;
+    justify-content: space-between;
+    
+
+  }
+  .group-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .group-item.active {
+    border: 2px solid #000;
+    
+  }
+  .group-name {
+    display: flex;
+    flex-direction: row;
+  }
+
+  
+  .empty-note-list {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(247, 236, 220, 1);
+    display: none;
+  }
+  .heading{
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+  }
+
+  .back-button {
+    margin-left: -50px;
+    padding: 0px;
+    position: absolute;
+    margin-top: 24px;
+    background-color: none;
+    border: none;
+    width: 5%;
+    height: 3%;
+    color: rgba(92, 92, 92, 1);
+    background-color: rgba(232, 232, 232, 1);
+
+  }
+  .title{
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.035em;
+    text-align: left;
+    margin-top: -20px;
+
+  }
+  .groupcreatebutton{
+    width: 250px;
+    height: 30px;
+    margin-left: -0.5px;
+    margin-left: 60px;
+  }
+}
