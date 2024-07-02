@@ -99,7 +99,7 @@ const App = () => {
       <div>
 <div className='notescontainer'>
       {selectedGroup ? (
-        <><h2 className="group-title"><div className='acronym' style={{backgroundColor: selectedGroup.color}}>{selectedGroup.acronym}</div><div className='groupname'>{selectedGroup.name}</div></h2>
+        <><div className="group-title"><div className='acronym' style={{backgroundColor: selectedGroup.color}}>{selectedGroup.acronym}</div><div className='groupname'>{selectedGroup.name}</div></div>
           <div className='noteinput'>
           <NoteInput onAddNote={handleAddNote} /></div>
           <div className='notelist'>
